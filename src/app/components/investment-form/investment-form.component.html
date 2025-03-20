@@ -1,0 +1,15 @@
+<form [formGroup]="investmentForm" (ngSubmit)="onSubmit()">
+    <label for="assetType"> Asset Type:</label>
+    <input id="assetType" formControlName="assetType" required>
+    
+    <label for="quantity">Quantity:</label>
+    <input id="quantity" type="number" formControlName="quantity" required>
+    
+    <label for="purchasePrice">Purchase Price:</label>
+    <input id="purchasePrice" type="number" formControlName="purchasePrice" required>
+    
+    <label for="purchaseDate">Purchase Date:</label>
+    <input id="purchaseDate" type="date" formControlName="purchaseDate" required>
+    
+    <button type="submit" [disabled]="investmentForm.invalid">Submit</button>
+  </form>
